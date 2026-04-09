@@ -1,4 +1,3 @@
-Options -MultiViews
 RewriteEngine On
 
 # Force HTTPS
