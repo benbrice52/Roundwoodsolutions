@@ -8,6 +8,22 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
 RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
+# Remove trailing slashes (except root)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+# 301 redirects for old blog URLs that Google has indexed
+Redirect 301 /blog/commercial-hard-landscaping-kent-a-guide-for-business-property-owners https://www.roundwoodsolutions.co.uk/blog/commercial-hard-landscaping-kent-guide-for-business-owners
+Redirect 301 /blog/corporate-landscape-maintenance-kent-business-parks-commercial-properties https://www.roundwoodsolutions.co.uk/blog/corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026
+
+# Blog post URL rewrites (/blog/slug -> blog-slug.html)
+RewriteRule ^blog/commercial-hard-landscaping-kent-guide-for-business-owners$ /blog-commercial-hard-landscaping-kent-guide-for-business-owners.html [L]
+RewriteRule ^blog/corporate-landscape-maintenance-kent-what-to-look-for-in-a-contractor$ /blog-corporate-landscape-maintenance-kent-what-to-look-for-in-a-contractor.html [L]
+RewriteRule ^blog/corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026$ /blog-corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026.html [L]
+RewriteRule ^blog/professional-ground-maintenance-services-in-kent-what-to-expect-in-2026$ /blog-professional-ground-maintenance-services-in-kent-what-to-expect-in-2026.html [L]
+RewriteRule ^blog/transforming-school-grounds-sand-pit-and-play-area-installation-in-chatham$ /blog-transforming-school-grounds-sand-pit-and-play-area-installation-in-chatham.html [L]
+RewriteRule ^blog/why-january-is-the-perfect-time-to-plan-your-commercial-grounds-maintenance-for-2026$ /blog-why-january-is-the-perfect-time-to-plan-your-commercial-grounds-maintenance-for-2026.html [L]
+
 # Serve .html files for clean URLs
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
