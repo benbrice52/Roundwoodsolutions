@@ -9,17 +9,21 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ftp.fasthosts.co.uk
           username: roundwoodsolutions.co.uk
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: /htdocs/
+          timeout: 60000
+          dangerous-clean-slate: false
+          exclude: |
             **/node_modules/**
             **/.DS_Store
             **/.well-known/**
             **/*.yml
+            **/README.md
