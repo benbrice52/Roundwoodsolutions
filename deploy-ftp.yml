@@ -19,6 +19,7 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
           server-dir: /htdocs/
+          security: loose
           timeout: 60000
           dangerous-clean-slate: false
           exclude: |
