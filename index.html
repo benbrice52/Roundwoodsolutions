@@ -90,7 +90,8 @@ nav{
   height:72px;
   position:sticky;
   top:0;
-  z-index:100;
+  z-index:101;
+  overflow:visible;
 }
 .logo-wrap{display:flex;align-items:center;gap:14px;}
 .logo-wrap img{height:48px;width:auto;}
@@ -251,7 +252,7 @@ footer{background:var(--g900);padding:40px 48px;border-top:1px solid rgba(255,25
   .footer-inner{flex-direction:column;}
 }
 
-.mob-menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.mob-menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;position:relative;z-index:102;pointer-events:all;}
 .mob-menu-btn span{display:block;width:24px;height:2px;background:var(--g900);border-radius:2px;transition:all 0.3s;}
 .mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--g100);z-index:99;padding:16px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
 .mob-menu ul{list-style:none;}
@@ -259,7 +260,7 @@ footer{background:var(--g900);padding:40px 48px;border-top:1px solid rgba(255,25
 .mob-menu ul li:last-child a{border-bottom:none;}
 .mob-menu .mob-cta{background:var(--g800);color:white!important;margin:12px 20px 4px;border-radius:4px;text-align:center;border-bottom:none!important;}
 .mob-menu.open{display:block;}
-@media(max-width:900px){.mob-menu-btn{display:flex;}}
+@media(max-width:900px){.mob-menu-btn{display:flex!important;}}
 </style>
 </head>
 <body>
