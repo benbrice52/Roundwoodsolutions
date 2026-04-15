@@ -98,6 +98,16 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
 .footer-links{display:flex;gap:18px;}
 .footer-links a{font-family:sans-serif;font-size:12px;color:#4A6A40;}
 @media(max-width:900px){nav{padding:0 20px;}.nav-links{display:none;}section{padding:48px 20px;}.svc-grid,.why-grid,.process-grid,.clients-grid{grid-template-columns:1fr;}.page-hero{padding:52px 20px;}.cta-band{padding:48px 20px;}.areas-dark{padding:40px 20px;}footer{padding:28px 20px;}}
+
+.mob-menu-btn{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;}
+.mob-menu-btn span{display:block;width:24px;height:2px;background:var(--g900);border-radius:2px;transition:all 0.3s;}
+.mob-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:2px solid var(--g100);z-index:99;padding:16px 0;box-shadow:0 4px 12px rgba(0,0,0,0.1);}
+.mob-menu ul{list-style:none;}
+.mob-menu ul li a{display:block;padding:13px 24px;font-family:sans-serif;font-size:15px;color:var(--txt);border-bottom:1px solid #F0EDE6;}
+.mob-menu ul li:last-child a{border-bottom:none;}
+.mob-menu .mob-cta{background:var(--g800);color:white!important;margin:12px 20px 4px;border-radius:4px;text-align:center;border-bottom:none!important;}
+.mob-menu.open{display:block;}
+@media(max-width:900px){.mob-menu-btn{display:flex;}}
 </style>
 </head>
 <body>
@@ -116,7 +126,21 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
     <li><a href="/blog">Blog</a></li>
     <li><a href="/contact-us" class="nav-cta">Contact Us</a></li>
   </ul>
+  <button class="mob-menu-btn" onclick="toggleMenu()" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
+<div class="mob-menu" id="mobMenu">
+  <ul>
+    <li><a href="/grounds-maintenance-kent-commercial-property-maintenance" onclick="toggleMenu()">Grounds Maintenance</a></li>
+    <li><a href="/commercial-landscaping-kent" onclick="toggleMenu()">Landscaping</a></li>
+    <li><a href="/school-grounds-playground-services" onclick="toggleMenu()">Learning &amp; Play</a></li>
+    <li><a href="/projects" onclick="toggleMenu()">Projects</a></li>
+    <li><a href="/about-us" onclick="toggleMenu()">About Us</a></li>
+    <li><a href="/blog" onclick="toggleMenu()">Blog</a></li>
+    <li><a href="/contact-us" onclick="toggleMenu()" class="mob-cta">Contact Us</a></li>
+  </ul>
+</div>
 <div class="trust-bar">
   <div class="trust-item"><div class="trust-dot"></div>BALI Accredited</div>
   <div class="trust-item"><div class="trust-dot"></div>Same team, every visit</div>
