@@ -132,5 +132,18 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
     <span class="footer-copy">&copy; 2025 Roundwood Solutions Ltd. Company No. 14984592. BALI Accredited.</span>
   </div>
 </footer>
+<script>
+function toggleMenu(){
+  var m = document.getElementById('mobMenu');
+  if(m) m.classList.toggle('open');
+}
+document.addEventListener('click', function(e){
+  var menu = document.getElementById('mobMenu');
+  var btn = document.querySelector('.mob-menu-btn');
+  if(menu && menu.classList.contains('open') && btn && !menu.contains(e.target) && !btn.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+</script>
 </body>
 </html>

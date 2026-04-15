@@ -290,6 +290,17 @@ footer{background:var(--g900);padding:40px 48px;border-top:1px solid rgba(255,25
     <span></span><span></span><span></span>
   </button>
 </nav>
+<div class="mob-menu" id="mobMenu">
+  <ul>
+    <li><a href="/grounds-maintenance-kent-commercial-property-maintenance">Grounds Maintenance</a></li>
+    <li><a href="/commercial-landscaping-kent">Landscaping</a></li>
+    <li><a href="/school-grounds-playground-services">Learning &amp; Play</a></li>
+    <li><a href="/projects">Projects</a></li>
+    <li><a href="/about-us">About Us</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contact-us" class="mob-cta">Contact Us</a></li>
+  </ul>
+</div>
 
 <!-- TRUST BAR -->
 <div class="trust-bar" role="complementary" aria-label="Key credentials">
@@ -591,5 +602,18 @@ footer{background:var(--g900);padding:40px 48px;border-top:1px solid rgba(255,25
   </div>
 </footer>
 
+<script>
+function toggleMenu(){
+  var m = document.getElementById('mobMenu');
+  if(m) m.classList.toggle('open');
+}
+document.addEventListener('click', function(e){
+  var menu = document.getElementById('mobMenu');
+  var btn = document.querySelector('.mob-menu-btn');
+  if(menu && menu.classList.contains('open') && btn && !menu.contains(e.target) && !btn.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+</script>
 </body>
 </html>
