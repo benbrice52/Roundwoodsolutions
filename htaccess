@@ -13,17 +13,17 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)/$ /$1 [L,R=301]
 
 # 301 redirects - old Fasthosts builder URLs
-Redirect 301 /landscaping https://www.roundwoodsolutions.co.uk/commercial-landscaping-kent
-Redirect 301 /learning-and-play https://www.roundwoodsolutions.co.uk/school-grounds-playground-services
-Redirect 301 /grounds-maintenance https://www.roundwoodsolutions.co.uk/grounds-maintenance-kent-commercial-property-maintenance
-Redirect 301 /contact https://www.roundwoodsolutions.co.uk/contact-us
-Redirect 301 /about https://www.roundwoodsolutions.co.uk/about-us
+RewriteRule ^landscaping$ https://www.roundwoodsolutions.co.uk/commercial-landscaping-kent [R=301,L]
+RewriteRule ^learning-and-play$ https://www.roundwoodsolutions.co.uk/school-grounds-playground-services [R=301,L]
+RewriteRule ^grounds-maintenance$ https://www.roundwoodsolutions.co.uk/grounds-maintenance-kent-commercial-property-maintenance [R=301,L]
+RewriteRule ^contact$ https://www.roundwoodsolutions.co.uk/contact-us [R=301,L]
+RewriteRule ^about$ https://www.roundwoodsolutions.co.uk/about-us [R=301,L]
 
-# 301 redirects - old blog URLs
-Redirect 301 /blog/commercial-hard-landscaping-kent-a-guide-for-business-property-owners https://www.roundwoodsolutions.co.uk/blog/commercial-hard-landscaping-kent-guide-for-business-owners
-Redirect 301 /blog/corporate-landscape-maintenance-kent-business-parks-commercial-properties https://www.roundwoodsolutions.co.uk/blog/corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026
+# 301 redirects - old blog URLs Google has indexed
+RewriteRule ^blog/commercial-hard-landscaping-kent-a-guide-for-business-property-owners$ https://www.roundwoodsolutions.co.uk/blog/commercial-hard-landscaping-kent-guide-for-business-owners [R=301,L]
+RewriteRule ^blog/corporate-landscape-maintenance-kent-business-parks-commercial-properties$ https://www.roundwoodsolutions.co.uk/blog/corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026 [R=301,L]
 
-# Blog post URL rewrites
+# Blog post URL rewrites (/blog/slug -> blog-slug.html)
 RewriteRule ^blog/commercial-hard-landscaping-kent-guide-for-business-owners$ /blog-commercial-hard-landscaping-kent-guide-for-business-owners.html [L]
 RewriteRule ^blog/corporate-landscape-maintenance-kent-what-to-look-for-in-a-contractor$ /blog-corporate-landscape-maintenance-kent-what-to-look-for-in-a-contractor.html [L]
 RewriteRule ^blog/corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026$ /blog-corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026.html [L]
