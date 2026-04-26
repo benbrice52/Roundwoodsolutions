@@ -15,8 +15,14 @@ RewriteRule ^grounds-maintenance$ https://www.roundwoodsolutions.co.uk/grounds-m
 RewriteRule ^contact$ https://www.roundwoodsolutions.co.uk/contact-us [R=301,L]
 RewriteRule ^about$ https://www.roundwoodsolutions.co.uk/about-us [R=301,L]
 
-# 301 redirects - old blog URLs (with /blog/ prefix) to flat format
-RewriteRule ^blog/(.+)$ https://www.roundwoodsolutions.co.uk/blog-$1 [R=301,L]
+# 301 redirects - old blog URLs Google has indexed
+RewriteRule ^blog/commercial-hard-landscaping-kent-a-guide-for-business-property-owners$ https://www.roundwoodsolutions.co.uk/blog-commercial-hard-landscaping-kent-guide-for-business-owners [R=301,L]
+RewriteRule ^blog/corporate-landscape-maintenance-kent-business-parks-commercial-properties$ https://www.roundwoodsolutions.co.uk/blog-corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026 [R=301,L]
+
+# Blog URL pattern - rewrite /blog/slug to /blog-slug.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/(.+)$ /blog-$1.html [L]
 
 # Serve .html files for clean URLs
 RewriteCond %{REQUEST_FILENAME} !-f
