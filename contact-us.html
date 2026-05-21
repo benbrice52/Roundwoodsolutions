@@ -200,7 +200,7 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
     <p class="hero-tag">Free site surveys</p>
     <h1>Contact Us</h1>
     <p>Fill in the form below for a free, no-obligation site survey and quotation. We typically respond within one working day.</p>
-    <div class="hero-cta"><a href="#contactForm" class="btn-primary">Get a free quote</a><a href="tel:07545642021" class="btn-outline">Call 07545 642021</a></div>
+    <div class="hero-cta"><a href="#contactForm" class="btn-primary">Request free site survey</a><a href="tel:07545642021" class="btn-outline">Call 07545 642021</a></div>
   </div>
 </div>
 
@@ -208,15 +208,16 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
   <div class="contact-grid">
     <div>
       <p class="section-tag">Send a message</p>
-      <h2 class="section-title" style="font-size:28px;margin-bottom:24px;">Get a free quote</h2>
+      <h2 class="section-title" style="font-size:28px;margin-bottom:24px;">Request a free site survey</h2>
       <form id="contactForm">
         <div class="form-group"><label>Your name</label><input type="text" id="f-name" placeholder="Your name" required></div>
         <div class="form-group"><label>Company name</label><input type="text" id="f-company" placeholder="Company name"></div>
         <div class="form-group"><label>Email address</label><input type="email" id="f-email" placeholder="Your email" required></div>
         <div class="form-group"><label>Phone number</label><input type="tel" id="f-phone" placeholder="Your phone number"></div>
         <div class="form-group"><label>Service required</label><select id="f-service"><option>Grounds Maintenance</option><option>Commercial Landscaping</option><option>Learning &amp; Play</option><option>Other / Not sure</option></select></div>
-        <div class="form-group"><label>Tell us about your site</label><textarea id="f-message" placeholder="Brief description of your site, location, and what you need..."></textarea></div>
-        <button type="submit" class="form-submit" id="f-submit">Send enquiry</button>
+        <div class="form-group"><label>Tell us about your site <span style="color:var(--txt2);font-weight:400;">(optional)</span></label><textarea id="f-message" placeholder="Brief description of your site, location, and what you need..."></textarea></div>
+        <button type="submit" class="form-submit" id="f-submit">Request free site survey</button>
+        <p style="font-family:sans-serif;font-size:12px;color:var(--txt2);margin-top:10px;">No obligation. We respond within one working day. Rated 5&#9733; on Google.</p>
         <p id="f-error" style="display:none;font-family:sans-serif;font-size:13px;color:#c0392b;margin-top:10px;">Something went wrong. Please try again or call us directly.</p>
       </form>
       <script>
@@ -244,13 +245,13 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
           if (res.ok) {
             window.location.href = 'https://www.roundwoodsolutions.co.uk/thank-you';
           } else {
-            btn.textContent = 'Send enquiry';
+            btn.textContent = 'Request free site survey';
             btn.disabled = false;
             err.style.display = 'block';
           }
         })
         .catch(function() {
-          btn.textContent = 'Send enquiry';
+          btn.textContent = 'Request free site survey';
           btn.disabled = false;
           err.style.display = 'block';
         });
@@ -259,7 +260,7 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
     </div>
     <div>
       <p class="section-tag">Get in touch directly</p>
-      <h3 style="font-size:24px;font-weight:400;color:var(--g900);margin-bottom:24px;">We would love to hear from you</h3>
+      <h3 style="font-size:24px;font-weight:400;color:var(--g900);margin-bottom:24px;">Speak to our team</h3>
       <div class="contact-detail"><div class="contact-detail-lbl">Call Ben</div><div class="contact-detail-val"><a href="tel:07545642021" style="color:var(--g900);">07545 642021</a></div><div class="contact-detail-sub">Grounds maintenance enquiries</div></div>
       <div class="contact-detail"><div class="contact-detail-lbl">Call Ricky</div><div class="contact-detail-val"><a href="tel:07833685371" style="color:var(--g900);">07833 685371</a></div><div class="contact-detail-sub">Landscaping project enquiries</div></div>
       <div class="contact-detail"><div class="contact-detail-lbl">Email</div><div class="contact-detail-val" style="font-size:16px;">office@roundwoodsolutions.co.uk</div><div class="contact-detail-sub">Response within 24 hours</div></div>
@@ -280,10 +281,20 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
   </div>
 </section>
 
-
 <footer>
   <div class="footer-inner">
     <div class="footer-brand"><img width="120" height="60" loading="lazy" src="9f061511-7f9a-42b4-bb53-7e4712967cd1.png" alt="Roundwood Solutions"><p>BALI-accredited commercial grounds maintenance and landscaping. Serving Kent and Medway since 2023.</p></div>
     <div class="footer-col"><h4>Services</h4><ul><li><a href="/grounds-maintenance-kent-commercial-property-maintenance">Grounds Maintenance</a></li><li><a href="/commercial-landscaping-kent">Commercial Landscaping</a></li><li><a href="/school-grounds-playground-services">Learning &amp; Play</a></li><li><a href="/projects">Projects</a></li></ul></div>
     <div class="footer-col"><h4>Company</h4><ul><li><a href="/about-us">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact-us">Contact Us</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:07545642021">07545 642021 (Ben)</a></li><li><a href="tel:07833685371">07833 685371 (Ricky)</a></li><li><span style="color:#5A7A50;">office@roundwoodsolutions.co.uk</span></l
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:07545642021">07545 642021 (Ben)</a></li><li><a href="tel:07833685371">07833 685371 (Ricky)</a></li><li><span style="color:#5A7A50;">office@roundwoodsolutions.co.uk</span></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">&copy; 2025 Roundwood Solutions Ltd. Company No. 14984592. Registered in England &amp; Wales.</span>
+    <div class="footer-links"><a href="/privacy-policy">Privacy Policy</a></div>
+  </div>
+</footer>
+<script>
+function toggleMenu(){var m=document.getElementById('mobMenu');m.classList.toggle('open');}
+</script>
+</body>
+</html>
