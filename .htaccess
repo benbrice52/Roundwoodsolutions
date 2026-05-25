@@ -40,7 +40,7 @@ RewriteRule ^blog-commercial-grass-cutting-contracts-kent\.html$ https://www.rou
 # Blog URL pattern - rewrite /blog/slug to /blog-slug.html
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^blog/([^/]+)$ /blog-$1.html [L]
+RewriteRule ^blog/([^/]+)$ /blog-$1.html [L,END]
 
 # Serve .html files for clean URLs
 RewriteCond %{REQUEST_FILENAME} !-f
