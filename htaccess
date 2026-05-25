@@ -1,0 +1,49 @@
+RewriteEngine On
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Force www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Block /blog/tags/ - no tags pages exist
+RewriteRule ^blog/tags(/.*)?$ - [R=404,L]
+
+# Strip trailing slashes (except root)
+RewriteCond %{REQUEST_URI} ^(.+)/$
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+# 301 redirects - old Fasthosts builder URLs
+RewriteRule ^landscaping$ https://www.roundwoodsolutions.co.uk/commercial-landscaping-kent [R=301,L]
+RewriteRule ^learning-and-play$ https://www.roundwoodsolutions.co.uk/school-grounds-playground-services [R=301,L]
+RewriteRule ^grounds-maintenance$ https://www.roundwoodsolutions.co.uk/grounds-maintenance-kent-commercial-property-maintenance [R=301,L]
+RewriteRule ^contact$ https://www.roundwoodsolutions.co.uk/contact-us [R=301,L]
+RewriteRule ^about$ https://www.roundwoodsolutions.co.uk/about-us [R=301,L]
+
+# 301 redirects - old blog URL variants Google has indexed (old slugs -> correct /blog/ URLs)
+RewriteRule ^blog/commercial-hard-landscaping-kent-a-guide-for-business-property-owners$ https://www.roundwoodsolutions.co.uk/blog/commercial-hard-landscaping-kent-guide-for-business-owners [R=301,L]
+RewriteRule ^blog/corporate-landscape-maintenance-kent-business-parks-commercial-properties$ https://www.roundwoodsolutions.co.uk/blog/corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026 [R=301,L]
+
+# 301 redirects - old .html blog URLs Google has indexed -> canonical /blog/ URLs
+RewriteRule ^blog-commercial-hard-landscaping-kent-guide-for-business-owners\.html$ https://www.roundwoodsolutions.co.uk/blog/commercial-hard-landscaping-kent-guide-for-business-owners [R=301,L]
+RewriteRule ^blog-corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026\.html$ https://www.roundwoodsolutions.co.uk/blog/corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026 [R=301,L]
+RewriteRule ^blog-corporate-landscape-maintenance-kent-what-to-look-for-in-a-contractor\.html$ https://www.roundwoodsolutions.co.uk/blog/corporate-landscape-maintenance-kent-what-to-look-for-in-a-contractor [R=301,L]
+RewriteRule ^blog-grounds-maintenance-for-business-parks-kent\.html$ https://www.roundwoodsolutions.co.uk/blog/grounds-maintenance-for-business-parks-kent [R=301,L]
+RewriteRule ^blog-grounds-maintenance-industrial-estates-kent\.html$ https://www.roundwoodsolutions.co.uk/blog/grounds-maintenance-industrial-estates-kent [R=301,L]
+RewriteRule ^blog-professional-ground-maintenance-services-in-kent-what-to-expect-in-2026\.html$ https://www.roundwoodsolutions.co.uk/blog/professional-ground-maintenance-services-in-kent-what-to-expect-in-2026 [R=301,L]
+RewriteRule ^blog-transforming-school-grounds-sand-pit-and-play-area-installation-in-chatham\.html$ https://www.roundwoodsolutions.co.uk/blog/transforming-school-grounds-sand-pit-and-play-area-installation-in-chatham [R=301,L]
+RewriteRule ^blog-why-january-is-the-perfect-time-to-plan-your-commercial-grounds-maintenance-for-2026\.html$ https://www.roundwoodsolutions.co.uk/blog/why-january-is-the-perfect-time-to-plan-your-commercial-grounds-maintenance-for-2026 [R=301,L]
+RewriteRule ^blog-commercial-grass-cutting-contracts-kent\.html$ https://www.roundwoodsolutions.co.uk/blog/commercial-grass-cutting-contracts-kent [R=301,L]
+
+# Blog URL pattern - rewrite /blog/slug to /blog-slug.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^blog/([^/]+)$ /blog-$1.html [L]
+
+# Serve .html files for clean URLs
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+)$ $1.html [L]
