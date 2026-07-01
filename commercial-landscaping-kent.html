@@ -158,6 +158,38 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
   "description": "Commercial landscaping contractor in Kent offering hard landscaping, fencing, turfing, planting and installation for business parks and commercial properties."
 }
 </script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How much does commercial landscaping cost in Kent?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Commercial landscaping costs vary depending on the scope of the project, materials required, and site access. Small projects typically range from £2,000–£8,000. Medium projects from £8,000–£25,000. Larger full-site transformations from £25,000+. We provide free, no-obligation site surveys and detailed written quotations."
+}
+},
+{
+"@type": "Question",
+"name": "Are you insured for commercial landscaping work?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. Roundwood Solutions carries full public liability insurance and all operatives hold relevant certifications. We are BALI-accredited, providing additional assurance of our professional standards."
+}
+},
+{
+"@type": "Question",
+"name": "Do you offer ongoing maintenance after landscaping projects?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. Many of our landscaping clients also take a grounds maintenance contract with us, ensuring their new outdoor spaces are kept in perfect condition year-round."
+}
+}
+]
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWL6367G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -263,4 +295,30 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
     <div class="footer-brand"><img width="120" height="60" loading="lazy" src="9f061511-7f9a-42b4-bb53-7e4712967cd1.png" alt="Roundwood Solutions"><p>BALI-accredited commercial grounds maintenance and landscaping. Serving Kent and Medway since 2023.</p></div>
     <div class="footer-col"><h4>Services</h4><ul><li><a href="/grounds-maintenance-kent-commercial-property-maintenance">Grounds Maintenance</a></li><li><a href="/commercial-landscaping-kent">Commercial Landscaping</a></li><li><a href="/school-grounds-playground-services">Learning &amp; Play</a></li><li><a href="/projects">Projects</a></li></ul></div>
     <div class="footer-col"><h4>Company</h4><ul><li><a href="/about-us">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact-us">Contact Us</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:07545642021">07545 642021 (Ben)</a></li><li><a href="tel:07833685371">07833 685371 (Ricky)</a></li><li><span style="color:#5A7A50;">office@roundwoodsolutions.co.uk</span></li
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:07545642021">07545 642021 (Ben)</a></li><li><a href="tel:07833685371">07833 685371 (Ricky)</a></li><li><span style="color:#5A7A50;">office@roundwoodsolutions.co.uk</span></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 Roundwood Solutions Ltd &middot; Company No. 14984592 &middot; BALI Accredited &middot; Registered in England &amp; Wales</p>
+    <div class="footer-links">
+      <a href="/cookie-policy">Cookie Policy</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  var m = document.getElementById('mobMenu');
+  if(m) m.classList.toggle('open');
+}
+document.addEventListener('click', function(e){
+  var menu = document.getElementById('mobMenu');
+  var btn = document.querySelector('.mob-menu-btn');
+  if(menu && menu.classList.contains('open') && btn && !menu.contains(e.target) && !btn.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>

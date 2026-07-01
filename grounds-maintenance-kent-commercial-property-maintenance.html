@@ -110,6 +110,70 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
 .mob-menu.open{display:block;}
 @media(max-width:900px){.mob-menu-btn{display:flex!important;}}
 </style>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "How often should grounds maintenance be carried out?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Most commercial properties benefit from fortnightly visits during the growing season (March to October) and monthly visits over winter. We will recommend the right schedule for your specific site during your free survey."
+}
+},
+{
+"@type": "Question",
+"name": "Do you provide all equipment?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We bring all necessary equipment including mowers, strimmers, hedge trimmers, and hand tools. All green waste is removed and disposed of responsibly."
+}
+},
+{
+"@type": "Question",
+"name": "Do you offer lawn maintenance contracts in Kent?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We provide fixed annual lawn maintenance contracts for commercial properties across Kent, covering regular mowing, edging, treatments, and seasonal care."
+}
+},
+{
+"@type": "Question",
+"name": "Can you work outside normal business hours?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We can schedule visits early morning, evenings, or weekends to minimise disruption to your business operations."
+}
+},
+{
+"@type": "Question",
+"name": "Are you insured and accredited?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. Roundwood Solutions is BALI-accredited and carries £5 million public liability insurance. All pesticide work is carried out by PA1, PA6A, and PA6AW certified operatives."
+}
+},
+{
+"@type": "Question",
+"name": "How much does grounds maintenance cost in Kent?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Costs depend on site size, visit frequency, and services required. Most commercial contracts range from £80–£400 per visit. We provide free, detailed quotes with no hidden costs."
+}
+},
+{
+"@type": "Question",
+"name": "Do you offer emergency callouts?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Yes. We provide emergency response for storm damage, urgent site clearance, and other reactive maintenance needs."
+}
+}
+]
+}
+</script>
 </head>
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWL6367G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -298,4 +362,30 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
     <div class="footer-brand"><img width="120" height="60" loading="lazy" src="9f061511-7f9a-42b4-bb53-7e4712967cd1.png" alt="Roundwood Solutions"><p>BALI-accredited commercial grounds maintenance and landscaping. Serving Kent and Medway since 2023.</p></div>
     <div class="footer-col"><h4>Services</h4><ul><li><a href="/grounds-maintenance-kent-commercial-property-maintenance">Grounds Maintenance</a></li><li><a href="/commercial-landscaping-kent">Commercial Landscaping</a></li><li><a href="/school-grounds-playground-services">Learning &amp; Play</a></li><li><a href="/projects">Projects</a></li></ul></div>
     <div class="footer-col"><h4>Company</h4><ul><li><a href="/about-us">About Us</a></li><li><a href="/blog">Blog</a></li><li><a href="/contact-us">Contact Us</a></li></ul></div>
-    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:07545642021">07545 642021 (Ben)</a></li><li><a href="tel:07833685371">07833 685371 (Ricky)</a></li><li><span style="color:#5A7A50;">office@roundwoodsolutions.co.uk</span></li
+    <div class="footer-col"><h4>Contact</h4><ul><li><a href="tel:07545642021">07545 642021 (Ben)</a></li><li><a href="tel:07833685371">07833 685371 (Ricky)</a></li><li><span style="color:#5A7A50;">office@roundwoodsolutions.co.uk</span></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 Roundwood Solutions Ltd &middot; Company No. 14984592 &middot; BALI Accredited &middot; Registered in England &amp; Wales</p>
+    <div class="footer-links">
+      <a href="/cookie-policy">Cookie Policy</a>
+      <a href="/privacy-policy">Privacy Policy</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  var m = document.getElementById('mobMenu');
+  if(m) m.classList.toggle('open');
+}
+document.addEventListener('click', function(e){
+  var menu = document.getElementById('mobMenu');
+  var btn = document.querySelector('.mob-menu-btn');
+  if(menu && menu.classList.contains('open') && btn && !menu.contains(e.target) && !btn.contains(e.target)){
+    menu.classList.remove('open');
+  }
+});
+</script>
+</body>
+</html>
