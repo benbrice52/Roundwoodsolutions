@@ -144,6 +144,14 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
 .mob-menu .mob-cta{background:var(--g800);color:white!important;margin:12px 20px 4px;border-radius:4px;text-align:center;border-bottom:none!important;}
 .mob-menu.open{display:block;}
 @media(max-width:900px){.mob-menu-btn{display:flex!important;}}
+.bc-nav{background:var(--warm);padding:11px 48px;border-bottom:1px solid #DDD9CF;}
+.bc-list{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0;font-family:sans-serif;font-size:12px;}
+.bc-item{display:flex;align-items:center;color:var(--txt2);}
+.bc-item a{color:var(--txt2);}
+.bc-item a:hover{color:var(--g800);text-decoration:underline;}
+.bc-item:not(:last-child)::after{content:">";margin:0 8px;color:#B7B2A4;}
+.bc-current{color:var(--g900);font-weight:600;}
+@media(max-width:900px){.bc-nav{padding:9px 20px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -175,6 +183,17 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
   "publisher": {"@type": "Organization","name": "Roundwood Solutions Ltd","url": "https://www.roundwoodsolutions.co.uk"},
   "url": "https://www.roundwoodsolutions.co.uk/blog-transforming-school-grounds-sand-pit-and-play-area-installation-in-chatham",
   "description": "How Roundwood Solutions transformed a Chatham school grounds with sand pit and play area installation."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.roundwoodsolutions.co.uk/"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.roundwoodsolutions.co.uk/blog"},
+    {"@type": "ListItem", "position": 3, "name": "Transforming School Grounds: Sand Pit & Play Area Installation in Chatham", "item": "https://www.roundwoodsolutions.co.uk/blog/transforming-school-grounds-sand-pit-and-play-area-installation-in-chatham"}
+  ]
 }
 </script>
 </head>
@@ -213,6 +232,13 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
   <div class="trust-item"><div class="trust-dot"></div>Free site surveys</div>
   <div class="trust-item"><div class="trust-dot"></div>PA1 &amp; PA6A certified</div>
 </div>
+<nav class="bc-nav" aria-label="Breadcrumb">
+  <ol class="bc-list">
+    <li class="bc-item"><a href="/">Home</a></li>
+    <li class="bc-item"><a href="/blog">Blog</a></li>
+    <li class="bc-item bc-current" aria-current="page">Transforming School Grounds: Sand Pit & Play Area Installation in Chatham</li>
+  </ol>
+</nav>
 <div class="page-hero" style="padding:56px 48px;">
   <div class="page-hero-content">
     <p class="hero-tag">Case Study</p>

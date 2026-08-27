@@ -128,6 +128,14 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
 .mob-menu .mob-cta{background:var(--g800);color:white!important;margin:12px 20px 4px;border-radius:4px;text-align:center;border-bottom:none!important;}
 .mob-menu.open{display:block;}
 @media(max-width:900px){.mob-menu-btn{display:flex!important;}}
+.bc-nav{background:var(--warm);padding:11px 48px;border-bottom:1px solid #DDD9CF;}
+.bc-list{display:flex;flex-wrap:wrap;list-style:none;margin:0;padding:0;font-family:sans-serif;font-size:12px;}
+.bc-item{display:flex;align-items:center;color:var(--txt2);}
+.bc-item a{color:var(--txt2);}
+.bc-item a:hover{color:var(--g800);text-decoration:underline;}
+.bc-item:not(:last-child)::after{content:">";margin:0 8px;color:#B7B2A4;}
+.bc-current{color:var(--g900);font-weight:600;}
+@media(max-width:900px){.bc-nav{padding:9px 20px;}}
 </style>
 <script type="application/ld+json">
 {
@@ -155,6 +163,16 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
   "name": "Contact Roundwood Solutions",
   "url": "https://www.roundwoodsolutions.co.uk/contact-us",
   "description": "Get in touch with Roundwood Solutions for a free site survey and quote."
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.roundwoodsolutions.co.uk/"},
+    {"@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.roundwoodsolutions.co.uk/contact-us"}
+  ]
 }
 </script>
 </head>
@@ -194,6 +212,12 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
   <div class="trust-item"><div class="trust-dot"></div>PA1 &amp; PA6A certified</div>
   <div class="trust-item"><div class="trust-dot"></div>DBS-checked staff available</div>
 </div>
+<nav class="bc-nav" aria-label="Breadcrumb">
+  <ol class="bc-list">
+    <li class="bc-item"><a href="/">Home</a></li>
+    <li class="bc-item bc-current" aria-current="page">Contact Us</li>
+  </ol>
+</nav>
 <div class="page-hero">
   <div class="page-hero-bg" style="background-image:url('images/a637d625-ecfa-4373-a89c-379cd5ce479d.jpg');"></div>
   <div class="page-hero-content">
