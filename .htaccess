@@ -1,19 +1,16 @@
 RewriteEngine On
 
-# Force HTTPS
-RewriteCond %{HTTPS} off
-RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-# Force www
+# Force HTTPS and www in a single hop
+RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} !^www\. [NC]
-RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+RewriteRule ^(.*)$ https://www.roundwoodsolutions.co.uk%{REQUEST_URI} [R=301,L]
 
 # Block /blog/tags/ - no tags pages exist
 RewriteRule ^blog/tags(/.*)?$ - [R=404,L]
 
 # Strip trailing slashes (except root)
 RewriteCond %{REQUEST_URI} ^(.+)/$
-RewriteRule ^(.+)/$ /$1 [R=301,L]
+RewriteRule ^(.+)/$ https://www.roundwoodsolutions.co.uk/$1 [R=301,L]
 
 # 301 redirects - old Fasthosts builder URLs
 RewriteRule ^landscaping$ https://www.roundwoodsolutions.co.uk/commercial-landscaping-kent [R=301,L]
@@ -22,21 +19,35 @@ RewriteRule ^grounds-maintenance$ https://www.roundwoodsolutions.co.uk/grounds-m
 RewriteRule ^contact$ https://www.roundwoodsolutions.co.uk/contact-us [R=301,L]
 RewriteRule ^about$ https://www.roundwoodsolutions.co.uk/about-us [R=301,L]
 
+# 301 redirects - old subfolder pages from the March 2026 build
+RewriteRule ^(commercial-landscaping-kent|grounds-maintenance-kent-commercial-property-maintenance)/.+$ https://www.roundwoodsolutions.co.uk/$1 [R=301,L]
+
 # 301 redirects - old slugs that were renamed (different text, not just format)
 RewriteRule ^blog/commercial-hard-landscaping-kent-a-guide-for-business-property-owners$ https://www.roundwoodsolutions.co.uk/blog/commercial-hard-landscaping-kent-guide-for-business-owners [R=301,L]
 RewriteRule ^blog/corporate-landscape-maintenance-kent-business-parks-commercial-properties$ https://www.roundwoodsolutions.co.uk/blog/corporate-landscape-maintenance-kent-complete-guide-for-business-parks-commercial-properties-2026 [R=301,L]
 
+# 301 redirect - removed post (was in old sitemap and internal links, never published)
+RewriteRule ^blog[/-]commercial-garden-design-kent(\.html)?$ https://www.roundwoodsolutions.co.uk/commercial-landscaping-kent [R=301,L]
+
 # 301 redirects - ANY old flat blog URL (with or without .html) -> canonical /blog/slug
-RewriteRule ^blog-(.+)\.html$ /blog/$1 [R=301,L]
-RewriteRule ^blog-(.+)$ /blog/$1 [R=301,L]
+RewriteRule ^blog-(.+)\.html$ https://www.roundwoodsolutions.co.uk/blog/$1 [R=301,L]
+RewriteRule ^blog-(.+)$ https://www.roundwoodsolutions.co.uk/blog/$1 [R=301,L]
+
+# 301 redirects - direct requests for .html files -> clean URL
+# THE_REQUEST only matches what the browser asked for, so the internal rewrites below can't loop
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^index\.html$ https://www.roundwoodsolutions.co.uk/ [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+[^/\s?]+\.html[\s?] [NC]
+RewriteRule ^([^/]+)\.html$ https://www.roundwoodsolutions.co.uk/$1 [R=301,L]
 
 # Blog URL pattern - rewrite /blog/slug to /blog-slug.html (internal, no redirect)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^blog/([^/]+)$ /blog-$1.html [L,END]
 
-# Serve .html files for clean URLs
+# Serve .html files for clean URLs - single-level paths only
+# (nested paths like /about-us/anything now return a clean 404 instead of a 500 loop)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.+)$ $1.html [L]
+RewriteRule ^([^/.]+)$ /$1.html [L,END]
