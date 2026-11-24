@@ -7,6 +7,12 @@
 <meta name="description" content="Privacy policy for Roundwood Solutions Ltd — how we collect, use and protect your personal data.">
 <link rel="canonical" href="https://www.roundwoodsolutions.co.uk/privacy-policy">
 <meta name="robots" content="noindex, follow">
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('consent','default',{ad_storage:'denied',ad_user_data:'denied',ad_personalization:'denied',analytics_storage:'denied',wait_for_update:500});
+gtag('set','ads_data_redaction',true);
+try{if(localStorage.getItem('rw_consent')==='granted'){gtag('consent','update',{ad_storage:'granted',ad_user_data:'granted',ad_personalization:'granted',analytics_storage:'granted'});}}catch(e){}
+</script>
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src="https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);})(window,document,"script","dataLayer","GTM-PWL6367G");</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
@@ -80,7 +86,6 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
 </script>
 </head>
 <body>
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWL6367G" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav>
   <a href="/" class="logo-wrap"><img src="/logo-roundwood.png" alt="Roundwood Solutions Ltd logo" width="132" height="48"><div><span class="logo-name">Roundwood Solutions Ltd</span><span class="logo-sub">Commercial Landscaping &amp; Grounds Maintenance</span></div></a>
   <ul class="nav-links">
@@ -126,7 +131,7 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
 
 <section>
   <div class="prose">
-    <p class="last-updated">Last updated: June 2026</p>
+    <p class="last-updated">Last updated: November 2026</p>
 
     <p>Roundwood Solutions Ltd ("we", "us", "our") is committed to protecting your personal data. This privacy policy explains how we collect, use and protect information about you when you use our website or contact us about our services.</p>
 
@@ -163,9 +168,10 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
     <h2>How long we keep your data</h2>
     <p>We retain enquiry data for up to 24 months in case you contact us again about the same or a related matter. Data relating to active or completed contracts is retained for 6 years in line with standard business record-keeping requirements. You can request deletion at any time (see Your rights below).</p>
 
-    <h2>Cookies and analytics</h2>
-    <p>Our website uses Google Tag Manager and Google Analytics to collect anonymous information about how visitors use the site. This data does not identify individuals and is used only to understand site performance and improve our content. You can opt out of Google Analytics tracking using the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics opt-out browser add-on</a>.</p>
-    <p>We also use Google Ads conversion tracking to measure the effectiveness of our advertising. This uses cookies to record when a user has visited our site after clicking an ad.</p>
+    <h2>Cookies</h2>
+    <p>Our website uses Google Tag Manager to run Google Ads tags. These measure how well our advertising works, for example whether someone who clicked one of our ads went on to send us an enquiry or call us. We do not use Google Analytics or any other tracking.</p>
+    <p>These Google Ads tags only set cookies (such as <code>_gcl_au</code>) if you click Accept on our cookie banner. If you click Reject, no advertising cookies are set. Google may still receive limited information without cookies, such as the fact that a page was viewed, which it uses to estimate how well ads are performing.</p>
+    <p>We save your choice in your browser so we don't ask you again on every page. You can change your choice at any time using the Cookie settings link at the bottom of any page.</p>
 
     <h2>Your rights</h2>
     <p>Under UK GDPR you have the right to:</p>
@@ -232,5 +238,6 @@ footer{background:var(--g900);padding:36px 48px;border-top:1px solid rgba(255,25
 function toggleMenu(){var m=document.getElementById('mobMenu');if(m)m.classList.toggle('open');}
 document.addEventListener('click',function(e){var menu=document.getElementById('mobMenu');var btn=document.querySelector('.mob-menu-btn');if(menu&&menu.classList.contains('open')&&btn&&!menu.contains(e.target)&&!btn.contains(e.target)){menu.classList.remove('open');}});
 </script>
+<script src="/cookie-consent.js" defer></script>
 </body>
 </html>
