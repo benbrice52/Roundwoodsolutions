@@ -4,19 +4,19 @@
   <!-- Core pages -->
   <url>
     <loc>https://www.roundwoodsolutions.co.uk/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://www.roundwoodsolutions.co.uk/grounds-maintenance-kent-commercial-property-maintenance</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://www.roundwoodsolutions.co.uk/commercial-landscaping-kent</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -40,6 +40,7 @@
   </url>
   <url>
     <loc>https://www.roundwoodsolutions.co.uk/projects</loc>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -55,7 +56,7 @@
   </url>
   <url>
     <loc>https://www.roundwoodsolutions.co.uk/blog</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -75,7 +76,7 @@
   </url>
   <url>
     <loc>https://www.roundwoodsolutions.co.uk/blog/commercial-grass-cutting-contracts-kent</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -111,7 +112,7 @@
   </url>
   <url>
     <loc>https://www.roundwoodsolutions.co.uk/blog/professional-ground-maintenance-services-in-kent-what-to-expect-in-2026</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -142,6 +143,12 @@
   <url>
     <loc>https://www.roundwoodsolutions.co.uk/commercial-landscaping-maidstone</loc>
     <lastmod>2026-11-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.roundwoodsolutions.co.uk/blog/grounds-maintenance-care-homes-kent</loc>
+    <lastmod>2026-11-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
