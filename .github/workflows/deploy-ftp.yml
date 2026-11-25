@@ -22,7 +22,7 @@ jobs:
           server-dir: ${{ secrets.FTP_SERVER_DIR }}/
           protocol: ftps
           port: 21
-          dangerous-clean-slate: True
+          dangerous-clean-slate: false
           log-level: verbose
           exclude: |
             **/.github/**
